@@ -1,0 +1,40 @@
+@import '~@/styles/var.less';
+
+.pop-up {
+  font-size: 15px;
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -100%);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-out;
+
+  &.info {
+    color: @words;
+    background-color: @primary;
+  }
+
+  &.success {
+    color: @lightWords;
+    background-color: @success;
+  }
+
+  &.warn {
+    color: @lightWords;
+    background-color: @warn;
+  }
+
+  &.error {
+    color: @words;
+    background-color: @danger;
+  }
+}
